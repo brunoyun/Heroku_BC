@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' "/Users/s01by9/Dropbox/Work/2020/Teaching/Applied AI/Lectures/Resources/Flask_deployment/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from setuptools.command.easy_install import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
